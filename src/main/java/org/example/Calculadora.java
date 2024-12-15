@@ -31,8 +31,13 @@ public class Calculadora {
         }
         return a * a;
     }
-        private int porcentaje(double a, double b){
+    private static double porcentaje(double a, double b){
+
         return (a * b) / 100;
+    }
+
+    public static double potencia(double a, double b){
+        return Math.pow(a, b);
     }
 
     public static void main(String[] args) {
@@ -52,6 +57,7 @@ public class Calculadora {
         System.out.println("4. Dividir");
         System.out.println("5. Módulo");
         System.out.println("6. Porcentaje");
+        System.out.println("7. Potencia");
         System.out.print("Opción: ");
         int opcion = scanner.nextInt();
 
@@ -81,6 +87,10 @@ public class Calculadora {
             case 6:
                 resultado = porcentaje(num1, num2);
                 System.out.println("El resultado del porcentaje es: " + resultado);
+                break;
+            case 7:
+                resultado = potencia(num1, num2);
+                System.out.println("El resultado de la potencia es: " + resultado);
                 break;
             default:
                 System.out.println("Opción no válida.");
